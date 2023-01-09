@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.228b5d5b.css",
+    "main.js": "/portfolio/static/js/main.a2d4f10a.js",
+    "static/media/painting-gif.gif": "/portfolio/static/media/painting-gif.b9a52b777fea750fc02c.gif",
+    "static/media/painting.jpg": "/portfolio/static/media/painting.457939328ebfa31f53c2.jpg",
+    "static/media/project-1.png": "/portfolio/static/media/project-1.f50b48b07c3b22272085.png",
+    "static/media/project-3.png": "/portfolio/static/media/project-3.a54160dac9160102a4bd.png",
+    "static/media/project-2.png": "/portfolio/static/media/project-2.057ec3760dbe113f6359.png",
+    "static/media/reactjs.png": "/portfolio/static/media/reactjs.ed45923ade03697c994a.png",
+    "static/media/bootstrap.svg": "/portfolio/static/media/bootstrap.88d777cba9db1628fbcc4319e380caa5.svg",
+    "static/media/github.svg": "/portfolio/static/media/github.0046aca0d3ace6f5c7e059797925848a.svg",
+    "static/media/code-icon.svg": "/portfolio/static/media/code-icon.9b12dfe7e51d0e5aa4abd71231a348d8.svg",
+    "static/media/git.svg": "/portfolio/static/media/git.3ac9a6169cd58c66df206f965721cfb3.svg",
+    "static/media/linkedin.svg": "/portfolio/static/media/linkedin.c304a4148cde039a54532585f4d47b48.svg",
+    "static/media/javascript.svg": "/portfolio/static/media/javascript.88f2cfeb7b596582cdfd50063b108439.svg",
+    "static/media/html5.svg": "/portfolio/static/media/html5.4519b6f7771f900cfd8e89e36e39e495.svg",
+    "index.html": "/portfolio/index.html",
+    "static/media/css3.svg": "/portfolio/static/media/css3.7b05526845d7a6672ee3f536a71c20f8.svg",
+    "static/media/restore-down-icon.svg": "/portfolio/static/media/restore-down-icon.5d1c3b98b2c06500da1da2fb8160e4dd.svg",
+    "static/media/maximize-icon.svg": "/portfolio/static/media/maximize-icon.231d77f38a7d837bfde499b07196e105.svg",
+    "static/media/close-icon.svg": "/portfolio/static/media/close-icon.64f09d760e8936f5907a62abff40b422.svg",
+    "static/media/minimize-icon.svg": "/portfolio/static/media/minimize-icon.b72eb12a233a292f6426b61e9b25af20.svg",
+    "main.228b5d5b.css.map": "/portfolio/static/css/main.228b5d5b.css.map",
+    "main.a2d4f10a.js.map": "/portfolio/static/js/main.a2d4f10a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.228b5d5b.css",
+    "static/js/main.a2d4f10a.js"
+  ]
+}
