@@ -11,12 +11,12 @@ const Tabs = ({ tabs, onMaximizeWindow }) => {
               className={`tab ${
                 tab.minimized ? "" : "active-btn"
               } bg-transparent main-border w-100 h-100 rounded-0 text-body p-0`}
-              aria-label={`${tab.name} window`}
+              aria-label={`${tab.name} tab`}
               onClick={() => onMaximizeWindow(tab.name, false)}
             >
               <img
                 src={tab.icon}
-                alt=""
+                alt={`${tab.name} tab`}
                 className={`img-fluid ${
                   tab.name === "contact" ? "mail-icon" : ""
                 }`}

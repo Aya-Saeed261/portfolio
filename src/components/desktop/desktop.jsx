@@ -82,7 +82,7 @@ const Desktop = ({
           onOrderChange={onOrderChange}
           onCloseWindow={() => {
             setShowProjectsWindow(false);
-            onRemoveTab("project");
+            onRemoveTab("projects");
           }}
           onMinimizeWindow={onMinimizeWindow}
           isMinimized={
