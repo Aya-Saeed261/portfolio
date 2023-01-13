@@ -32,10 +32,6 @@ const LoadingScreen = () => {
             <Col className="h-100 border border-top-0 border-bottom-0 border-3 border-dark"></Col>
             <Col className="h-100 border border-top-0 border-bottom-0 border-3 border-dark"></Col>
             <Col className="h-100 border border-top-0 border-bottom-0 border-3 border-dark"></Col>
-            <Col className="h-100 border border-top-0 border-bottom-0 border-3 border-dark"></Col>
-            <Col className="h-100 border border-top-0 border-bottom-0 border-3 border-dark"></Col>
-            <Col className="h-100 border border-top-0 border-bottom-0 border-3 border-dark"></Col>
-            <Col className="h-100 border border-top-0 border-bottom-0 border-3 border-dark"></Col>
             <Col className="h-100 border border-top-0 border-bottom-0 border-end-0 border-3 border-dark"></Col>
           </Row>
         </div>
