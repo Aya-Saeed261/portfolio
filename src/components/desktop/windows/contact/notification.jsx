@@ -4,7 +4,7 @@ import React from "react";
 import { Toast, ToastContainer, Button } from "react-bootstrap";
 
 // Imported assets
-import close from "../assets/icons/close-icon.svg";
+import close from "../../../../assets/icons/close-icon.svg";
 
 const Notification = ({ onClose, show, msg }) => {
   return (

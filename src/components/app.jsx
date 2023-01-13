@@ -3,27 +3,15 @@ import { useState, useEffect } from "react";
 // Imported components
 import Desktop from "./desktop/desktop";
 import Taskbar from "./taskbar/taskbar";
-import Notification from "./notification";
 import Credits from "./credits";
 import LoadingScreen from "./loadingScreen";
 
 const App = () => {
-  const [showNotifi, setShowNotifi] = useState(false);
-  const [notification, setNotification] = useState("");
   const [order, setOrder] = useState({ about: 1, projects: 2, contact: 3 });
   const [tabs, setTabs] = useState([]);
-  const [showModal, setShowModal] = useState(false);
+  const [showCredits, setShowCredits] = useState(false);
   const [showLoading, setShowLoading] = useState(true);
   const [shutDown, setShutDown] = useState(false);
-
-  const handleClosingNotifi = () => {
-    setShowNotifi(false);
-  };
-
-  const handlwShowingNotifi = (msg) => {
-    setNotification(msg);
-    setShowNotifi(true);
-  };
 
   const handleOrderChange = (window) => {
     const orderObj = { ...order };
@@ -66,16 +54,14 @@ const App = () => {
     if (!value) handleOrderChange(name);
   };
 
-  const handleToggleModal = () => {
-    setShowModal(!showModal);
+  const handleToggleCredits = () => {
+    setShowCredits(!showCredits);
   };
 
   const resetStates = () => {
-    setShowNotifi(false);
-    setNotification("");
     setOrder({ about: 1, projects: 2, contact: 3 });
     setTabs([]);
-    setShowModal(false);
+    setShowCredits(false);
     setShowLoading(true);
   };
 
@@ -99,7 +85,6 @@ const App = () => {
   ) : (
     <div className="flex-fill overflow-hidden d-flex flex-column">
       <Desktop
-        onNotification={handlwShowingNotifi}
         onNewTab={handleNewTab}
         onRemoveTab={handleRemoveTab}
         onMinimizeWindow={handleMinimizeWindow}
@@ -110,15 +95,10 @@ const App = () => {
       <Taskbar
         tabs={tabs}
         onMaximizeWindow={handleMinimizeWindow}
-        onOpenModal={handleToggleModal}
+        onOpenCredits={handleToggleCredits}
         onShutDown={handleShutDown}
       />
-      <Notification
-        onClose={handleClosingNotifi}
-        show={showNotifi}
-        msg={notification}
-      />
-      <Credits show={showModal} onCloseModal={handleToggleModal} />
+      <Credits show={showCredits} onClose={handleToggleCredits} />
       <div
         className={`shut-down ${
           shutDown ? "show" : ""

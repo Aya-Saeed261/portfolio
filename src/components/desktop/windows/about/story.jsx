@@ -1,12 +1,12 @@
-const calcAge = () => {
-  const dateOfBirth = new Date("01/26/1998");
-  const dateNow = Date.now();
-  const dif = dateNow - dateOfBirth;
-  const age = Math.floor(dif / 1000 / 60 / 60 / 24 / 365);
-  return age;
-};
-
 const Story = () => {
+  const calcAge = () => {
+    const dateOfBirth = new Date("01/26/1998");
+    const dateNow = Date.now();
+    const dif = dateNow - dateOfBirth;
+    const age = Math.floor(dif / 1000 / 60 / 60 / 24 / 365);
+    return age;
+  };
+
   return (
     <p className="mb-0">
       Hello! My name is Aya. I'm {calcAge()} years old. I studied electrical

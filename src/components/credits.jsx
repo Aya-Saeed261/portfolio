@@ -1,9 +1,9 @@
 // react-bootstrap
 import { Modal } from "react-bootstrap";
 
-const Credits = ({ show, onCloseModal }) => {
+const Credits = ({ show, onClose }) => {
   return (
-    <Modal show={show} onHide={onCloseModal} centered className="credits-modal">
+    <Modal show={show} onHide={onClose} centered className="credits-modal">
       <Modal.Header closeButton className="rounded-0 py-1 px-3">
         <Modal.Title>Credits</Modal.Title>
       </Modal.Header>

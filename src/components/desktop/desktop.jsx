@@ -7,7 +7,7 @@ import { Container } from "react-bootstrap";
 import MainIcon from "./mainIcon";
 import AboutWindow from "./windows/about/aboutWindow";
 import ProjectsWindow from "./windows/projects/projectsWindow";
-import ContactWindow from "./windows/contactWindow";
+import ContactWindow from "./windows/contact/contactWindow";
 
 // Imported assets
 import user from "../../assets/icons/character-icon.png";
@@ -15,7 +15,6 @@ import projects from "../../assets/icons/folder-icon.png";
 import mail from "../../assets/icons/mail-icon.png";
 
 const Desktop = ({
-  onNotification,
   onNewTab,
   onRemoveTab,
   onMinimizeWindow,
@@ -98,7 +97,6 @@ const Desktop = ({
         <ContactWindow
           order={order.contact}
           onOrderChange={onOrderChange}
-          onNotification={onNotification}
           onCloseWindow={() => {
             setShowContactWindow(false);
             onRemoveTab("contact");

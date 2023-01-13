@@ -41,6 +41,10 @@ body {
   border-color: var(--dark-gray) white white var(--dark-gray) !important;
 }
 
+.overflowY-scroll {
+  overflow-y: scroll;
+}
+
 /* Typography */
 body {
   font-family: "VT323", monospace;
@@ -153,7 +157,7 @@ body,
 
 @media (min-width: 768px) {
   .window.about {
-    left: calc(50% - 250px);
+    left: calc(55% - 250px);
   }
 
   .window.projects {
@@ -161,7 +165,7 @@ body,
   }
 
   .window.mail {
-    left: calc(55% - 250px);
+    left: calc(50% - 250px);
   }
 }
 

@@ -1,9 +1,9 @@
 import { useState, useRef } from "react";
 
-// react-bootstrap
+// React-Bootstrap
 import { Button, Fade, Container, Row, Col } from "react-bootstrap";
 
-// react-draggable
+// React-draggable
 import Draggable from "react-draggable";
 
 // Imported assets
@@ -61,7 +61,7 @@ const ProjectsWindow = ({
             onCloseWindow={onCloseWindow}
             onMinimizeWindow={() => onMinimizeWindow("projects", true)}
           />
-          <main className="window-main overflow-scroll flex-fill bg-white pt-4 pb-5">
+          <main className="window-main overflowY-scroll  flex-fill bg-white pt-4 pb-5">
             <Container fluid className="pt-3">
               <Row className="m-0 mb-5 justify-content-center">
                 <Col

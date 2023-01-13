@@ -3,7 +3,7 @@ import { useState } from "react";
 // react-bootstrap
 import { Dropdown } from "react-bootstrap";
 
-const Menu = ({ onOpenModal, onShutDown }) => {
+const Menu = ({ onOpenCredits, onShutDown }) => {
   const [active, setActive] = useState(false);
 
   return (
@@ -30,7 +30,7 @@ const Menu = ({ onOpenModal, onShutDown }) => {
         >
           Download my CV
         </Dropdown.Item>
-        <Dropdown.Item as="button" onClick={onOpenModal}>
+        <Dropdown.Item as="button" onClick={onOpenCredits}>
           Credits
         </Dropdown.Item>
         <Dropdown.Divider className="mx-2" />

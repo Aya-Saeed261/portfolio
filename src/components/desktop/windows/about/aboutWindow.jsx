@@ -61,7 +61,7 @@ const AboutWindow = ({
             onCloseWindow={onCloseWindow}
             onMinimizeWindow={() => onMinimizeWindow("about", true)}
           />
-          <main className="window-main overflow-scroll flex-fill bg-white py-3">
+          <main className="window-main overflowY-scroll  flex-fill bg-white py-3">
             <Container fluid className="holder">
               <Tabs
                 id="controlled-tab"

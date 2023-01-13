@@ -10,22 +10,24 @@ import { Button, Fade, Container, Row, Col } from "react-bootstrap";
 import { send } from "emailjs-com";
 
 // Imported components
-import WindowHeader from "./windowHeader";
+import WindowHeader from "../windowHeader";
+import Notification from "./notification";
 
 // Imported assets
-import mail from "../../../assets/icons/mail-icon.png";
-import linkedin from "../../../assets/icons/linkedin.svg";
-import github from "../../../assets/icons/github.svg";
+import mail from "../../../../assets/icons/mail-icon.png";
+import linkedin from "../../../../assets/icons/linkedin.svg";
+import github from "../../../../assets/icons/github.svg";
 
 const ContactWindow = ({
   order,
   onOrderChange,
-  onNotification,
   onCloseWindow,
   onMinimizeWindow,
   isMinimized,
 }) => {
   const [isFullScreen, setIsFullScreen] = useState(false);
+  const [showNotifi, setShowNotifi] = useState(false);
+  const [notification, setNotification] = useState("");
   const [toSend, setToSend] = useState({
     from_name: "",
     to_name: "Aya Saeed",
@@ -34,20 +36,29 @@ const ContactWindow = ({
   });
   const nodeRef = useRef(null);
 
+  const handleClosingNotifi = () => {
+    setShowNotifi(false);
+  };
+
+  const handleShowingNotifi = (msg) => {
+    setNotification(msg);
+    setShowNotifi(true);
+  };
+
   const handleSizeToggle = () => {
     setIsFullScreen(!isFullScreen);
   };
 
-  const onSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    onNotification("Checking email status...");
+    handleShowingNotifi("Checking email status...");
     send("service_r5zuzh8", "template_6wlf969", toSend, "Tl2nqjC1RobUsFA7u")
       .then(() => {
-        onNotification("Email was sent successfully!");
+        handleShowingNotifi("Email was sent successfully!");
       })
       .catch((err) => {
         console.log("FAILED...", err);
-        onNotification("Failed to sent email.");
+        handleShowingNotifi("Failed to send email.");
       });
   };
 
@@ -86,12 +97,12 @@ const ContactWindow = ({
             onCloseWindow={onCloseWindow}
             onMinimizeWindow={() => onMinimizeWindow("contact", true)}
           />
-          <main className="window-main flex-fill bg-white">
+          <main className="window-main overflowY-scroll flex-fill bg-white">
             <Container
               fluid
-              className="pb-4 pb-md-5 pt-3 pt-md-4 h-100 overflow-scroll d-flex flex-column justify-content-between gap-4"
+              className="pb-4 pb-md-5 pt-3 pt-md-4 overflowY-scroll h-100 d-flex flex-column justify-content-between gap-4"
             >
-              <form onSubmit={onSubmit} className="holder">
+              <form onSubmit={handleSubmit} className="holder">
                 <Row className="m-0">
                   <Col
                     className={`${
@@ -182,6 +193,11 @@ const ContactWindow = ({
               </ul>
             </Container>
           </main>
+          <Notification
+            onClose={handleClosingNotifi}
+            show={showNotifi}
+            msg={notification}
+          />
         </div>
       </Fade>
     </Draggable>
