@@ -722,10 +722,14 @@ body,
 }
 
 .prog-holder {
-  width: 100%;
-  max-width: 25rem;
   height: 2rem;
   contain: content;
+}
+
+@media (min-width: 768px) {
+  .prog-holder {
+    width: 25rem;
+  }
 }
 
 .prog-holder .prog {

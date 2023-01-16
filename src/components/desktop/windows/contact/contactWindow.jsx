@@ -100,7 +100,7 @@ const ContactWindow = ({
           <main className="window-main overflow-auto flex-fill bg-white">
             <Container
               fluid
-              className="pb-4 pb-md-5 pt-3 pt-md-4 overflowY-scroll h-100 d-flex flex-column justify-content-between gap-4"
+              className="pb-4 pt-3 pt-md-4 overflow-auto h-100 d-flex flex-column justify-content-between gap-4"
             >
               <form onSubmit={handleSubmit} className="holder">
                 <Row className="m-0">
