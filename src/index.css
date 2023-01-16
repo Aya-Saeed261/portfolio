@@ -209,12 +209,12 @@ body,
 }
 
 /* Start window header */
-.window-header {
+.window-header .title {
   cursor: -webkit-grab;
   cursor: grab;
 }
 
-.react-draggable-dragging .window-header {
+.react-draggable-dragging .window-header .title {
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }

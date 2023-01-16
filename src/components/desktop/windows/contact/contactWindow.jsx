@@ -97,7 +97,7 @@ const ContactWindow = ({
             onCloseWindow={onCloseWindow}
             onMinimizeWindow={() => onMinimizeWindow("contact", true)}
           />
-          <main className="window-main overflowY-scroll flex-fill bg-white">
+          <main className="window-main overflow-auto flex-fill bg-white">
             <Container
               fluid
               className="pb-4 pb-md-5 pt-3 pt-md-4 overflowY-scroll h-100 d-flex flex-column justify-content-between gap-4"
