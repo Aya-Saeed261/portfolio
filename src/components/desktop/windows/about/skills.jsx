@@ -1,11 +1,14 @@
 // Imported assets
-import html from "../../../../assets/icons/html5.svg";
-import css from "../../../../assets/icons/css3.svg";
-import js from "../../../../assets/icons/javascript.svg";
-import react from "../../../../assets/icons/reactjs.png";
-import git from "../../../../assets/icons/git.svg";
-import github from "../../../../assets/icons/github.svg";
-import bootstrap from "../../../../assets/icons/bootstrap.svg";
+import html from "../../../../assets/skills/html5.svg";
+import css from "../../../../assets/skills/css3.svg";
+import js from "../../../../assets/skills/javascript.svg";
+import react from "../../../../assets/skills/reactjs.png";
+import git from "../../../../assets/skills/git.svg";
+import github from "../../../../assets/skills/github.svg";
+import bootstrap from "../../../../assets/skills/bootstrap.svg";
+import redux from "../../../../assets/skills/redux.png";
+import nodejs from "../../../../assets/skills/nodejs.png";
+import mongodb from "../../../../assets/skills/mongodb.png";
 
 const Skills = () => {
   return (
@@ -30,6 +33,15 @@ const Skills = () => {
       </li>
       <li className="position-relative overflow-hidden">
         <img src={react} alt="React logo" className="img-fluid" />
+      </li>
+      <li className="position-relative overflow-hidden">
+        <img src={redux} alt="Redux logo" className="img-fluid" />
+      </li>
+      <li className="position-relative overflow-hidden">
+        <img src={nodejs} alt="NodeJS logo" className="img-fluid" />
+      </li>
+      <li className="position-relative overflow-hidden">
+        <img src={mongodb} alt="MongoDB logo" className="img-fluid" />
       </li>
     </ul>
   );

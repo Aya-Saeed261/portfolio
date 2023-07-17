@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* Global style */
 :root {
   --main-background: bisque;
@@ -18,11 +25,13 @@
   --heart-row: 15px;
 }
 
-body {
+body,
+a,
+button {
   color: var(--main-text);
 }
 
-/* Classes */
+/* Custom classes */
 .gray-bg {
   background-color: var(--main-gray);
 }
@@ -39,10 +48,6 @@ body {
 .main-border.active-btn,
 .main-border:focus {
   border-color: var(--dark-gray) white white var(--dark-gray) !important;
-}
-
-.overflowY-scroll {
-  overflow-y: scroll;
 }
 
 /* Typography */
@@ -114,6 +119,18 @@ body,
     left 0.3s cubic-bezier(0, 0.87, 0.91, 0.94),
     transform 0.3s cubic-bezier(0, 0.87, 0.91, 0.94), opacity 0.3s ease,
     visibility 0.3s ease;
+  -webkit-transition: width 0.3s cubic-bezier(0, 0.87, 0.91, 0.94),
+    height 0.3s cubic-bezier(0, 0.87, 0.91, 0.94),
+    top 0.3s cubic-bezier(0, 0.87, 0.91, 0.94),
+    left 0.3s cubic-bezier(0, 0.87, 0.91, 0.94), opacity 0.3s ease,
+    visibility 0.3s ease,
+    -webkit-transform 0.3s cubic-bezier(0, 0.87, 0.91, 0.94);
+  transition: width 0.3s cubic-bezier(0, 0.87, 0.91, 0.94),
+    height 0.3s cubic-bezier(0, 0.87, 0.91, 0.94),
+    top 0.3s cubic-bezier(0, 0.87, 0.91, 0.94),
+    left 0.3s cubic-bezier(0, 0.87, 0.91, 0.94), opacity 0.3s ease,
+    visibility 0.3s ease,
+    -webkit-transform 0.3s cubic-bezier(0, 0.87, 0.91, 0.94);
   transition: width 0.3s cubic-bezier(0, 0.87, 0.91, 0.94),
     height 0.3s cubic-bezier(0, 0.87, 0.91, 0.94),
     top 0.3s cubic-bezier(0, 0.87, 0.91, 0.94),
@@ -281,17 +298,17 @@ body,
 
 /* Start skills */
 .window.about .skills li::before {
+  background: -o-linear-gradient(
+    left,
+    rgba(255, 255, 255, 0.548) 0%,
+    rgba(255, 255, 255, 0.342) 100%
+  );
   background: -webkit-gradient(
     linear,
     left top,
     right top,
     from(rgba(255, 255, 255, 0.548)),
     to(rgba(255, 255, 255, 0.342))
-  );
-  background: -o-linear-gradient(
-    left,
-    rgba(255, 255, 255, 0.548) 0%,
-    rgba(255, 255, 255, 0.342) 100%
   );
   background: linear-gradient(
     to right,
@@ -366,6 +383,22 @@ body,
   background-color: var(--projects-bg);
 }
 
+.window.projects .window-main .name-link {
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.window.projects .window-main .name-link:hover {
+  color: var(--projects-btn);
+}
+
+.window.projects .window-main .image-holder {
+  aspect-ratio: 5/3;
+  -o-object-position: right;
+  object-position: right;
+}
+
 .window.projects .window-main .image-holder .links-holder {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 10;
@@ -396,6 +429,8 @@ body,
     transition: opacity 0.2s ease, -webkit-transform 0.5s ease;
     -o-transition: transform 0.5s ease, opacity 0.2s ease;
     transition: transform 0.5s ease, opacity 0.2s ease;
+    transition: transform 0.5s ease, opacity 0.2s ease,
+      -webkit-transform 0.5s ease;
     transition: transform 0.5s ease, opacity 0.2s ease,
       -webkit-transform 0.5s ease;
   }
@@ -470,6 +505,31 @@ body,
 .window.mail textarea:focus {
   outline: none;
   border-bottom-color: var(--contact-btn) !important;
+}
+
+.window.mail input.is-invalid:focus,
+.window.mail textarea.is-invalid:focus {
+  border-bottom-color: red !important;
+}
+
+.window.mail input:focus::-webkit-input-placeholder,
+.window.mail textarea:focus::-webkit-input-placeholder {
+  color: var(--contact-btn) !important;
+}
+
+.window.mail input:focus::-moz-placeholder,
+.window.mail textarea:focus::-moz-placeholder {
+  color: var(--contact-btn) !important;
+}
+
+.window.mail input:focus:-ms-input-placeholder,
+.window.mail textarea:focus:-ms-input-placeholder {
+  color: var(--contact-btn) !important;
+}
+
+.window.mail input:focus::-ms-input-placeholder,
+.window.mail textarea:focus::-ms-input-placeholder {
+  color: var(--contact-btn) !important;
 }
 
 .window.mail input:focus::-webkit-input-placeholder,
@@ -598,17 +658,17 @@ body,
 
 /* Start credits modal */
 .credits-modal .modal-header {
+  background: -o-linear-gradient(
+    left,
+    var(--credits-gradient-from) 0%,
+    var(--credits-gradient-to) 100%
+  );
   background: -webkit-gradient(
     linear,
     left top,
     right top,
     from(var(--credits-gradient-from)),
     to(var(--credits-gradient-to))
-  );
-  background: -o-linear-gradient(
-    left,
-    var(--credits-gradient-from) 0%,
-    var(--credits-gradient-to) 100%
   );
   background: linear-gradient(
     90deg,

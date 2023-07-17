@@ -9,14 +9,14 @@ import { Button, Fade, Container, Row, Col } from "react-bootstrap";
 // Emailjs
 import { send } from "emailjs-com";
 
-// Imported components
+// Components
 import WindowHeader from "../windowHeader";
 import Notification from "./notification";
 
-// Imported assets
+// Assets
 import mail from "../../../../assets/icons/mail-icon.png";
 import linkedin from "../../../../assets/icons/linkedin.svg";
-import github from "../../../../assets/icons/github.svg";
+import github from "../../../../assets/skills/github.svg";
 
 const ContactWindow = ({
   order,
@@ -28,13 +28,15 @@ const ContactWindow = ({
   const [isFullScreen, setIsFullScreen] = useState(false);
   const [showNotifi, setShowNotifi] = useState(false);
   const [notification, setNotification] = useState("");
-  const [toSend, setToSend] = useState({
-    from_name: "",
-    to_name: "Aya Saeed",
-    message: "",
-    reply_to: "",
-  });
+  const [name, setName] = useState("");
+  const [nameError, setNameError] = useState("");
+  const [email, setEmail] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [emailOnBlurError, setEmailOnBlurError] = useState(false);
+  const [msg, setMsg] = useState("");
+  const [msgError, setMsgError] = useState("");
   const nodeRef = useRef(null);
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
   const handleClosingNotifi = () => {
     setShowNotifi(false);
@@ -51,10 +53,26 @@ const ContactWindow = ({
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (nameError || emailError || msgError) return;
+    if (!name || !email || !msg) {
+      if (!name) setNameError("Name is required");
+      if (!email) setEmailError("Email is required");
+      if (!msg) setMsgError("Message is required");
+      return;
+    }
+    const userForm = {
+      from_name: name.trim(),
+      to_name: "Aya Saeed",
+      message: msg.trim(),
+      reply_to: email,
+    };
     handleShowingNotifi("Checking email status...");
-    send("service_r5zuzh8", "template_6wlf969", toSend, "Tl2nqjC1RobUsFA7u")
+    send("service_r5zuzh8", "template_6wlf969", userForm, "Tl2nqjC1RobUsFA7u")
       .then(() => {
         handleShowingNotifi("Email was sent successfully!");
+        setName("");
+        setEmail("");
+        setMsg("");
       })
       .catch((err) => {
         console.log("FAILED...", err);
@@ -62,8 +80,49 @@ const ContactWindow = ({
       });
   };
 
-  const handleChange = (e) => {
-    setToSend({ ...toSend, [e.target.name]: e.target.value });
+  const handleNameChange = (e) => {
+    const nameRegex = /^[A-Za-z\s]*$/;
+    setName(e.target.value);
+    if (!e.target.value) {
+      setNameError("Name is required");
+    } else if (!/^(?! )/.test(e.target.value)) {
+      setNameError("Name must start with a letter");
+    } else if (!nameRegex.test(e.target.value)) {
+      setNameError("Name should contain letters and spaces only");
+    } else {
+      setNameError("");
+    }
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+    if (!e.target.value) {
+      setEmailError("Email is required");
+    } else if (emailOnBlurError && !emailRegex.test(e.target.value)) {
+      setEmailError("Please enter a valid email");
+    } else {
+      setEmailError("");
+      setEmailOnBlurError(false);
+    }
+  };
+
+  const handleEmailValidation = (e) => {
+    if (!emailRegex.test(e.target.value)) {
+      setEmailError("Please enter a valid email");
+      setEmailOnBlurError(true);
+    } else {
+      setEmailError("");
+      setEmailOnBlurError(false);
+    }
+  };
+
+  const handleMsgChange = (e) => {
+    setMsg(e.target.value);
+    if (e.target.value.trim().length === 0) {
+      setMsgError("Message is required");
+    } else {
+      setMsgError("");
+    }
   };
 
   return (
@@ -102,7 +161,7 @@ const ContactWindow = ({
               fluid
               className="pb-4 pt-3 pt-md-4 overflow-auto h-100 d-flex flex-column justify-content-between gap-4"
             >
-              <form onSubmit={handleSubmit} className="holder">
+              <form onSubmit={handleSubmit} noValidate className="holder">
                 <Row className="m-0">
                   <Col
                     className={`${
@@ -115,12 +174,15 @@ const ContactWindow = ({
                       type="text"
                       name="from_name"
                       placeholder="Your name"
-                      value={toSend.from_name}
-                      onChange={handleChange}
+                      value={name}
+                      onChange={handleNameChange}
                       aria-label="Enter your name"
-                      className="d-block w-100 border-0 border-bottom p-2"
+                      className={`d-block w-100 border-0 border-bottom p-2 ${
+                        nameError ? "is-invalid border-danger" : ""
+                      }`}
                       required
                     />
+                    <p className="invalid-feedback mb-0">{nameError}</p>
                   </Col>
                   <Col
                     className={`${
@@ -133,25 +195,34 @@ const ContactWindow = ({
                       type="email"
                       name="reply_to"
                       placeholder="Your email"
-                      value={toSend.reply_to}
-                      onChange={handleChange}
+                      value={email}
+                      onChange={handleEmailChange}
+                      onBlur={handleEmailValidation}
                       aria-label="Enter your email"
-                      className="d-block w-100 border-0 border-bottom p-2"
+                      className={`d-block w-100 border-0 border-bottom p-2 ${
+                        emailError ? "is-invalid border-danger" : ""
+                      }`}
                       required
                     />
+                    <p className="invalid-feedback mb-0">{emailError}</p>
                   </Col>
                 </Row>
-                <textarea
-                  name="message"
-                  cols="30"
-                  rows="10"
-                  placeholder="Your message"
-                  value={toSend.message}
-                  onChange={handleChange}
-                  aria-label="Enter your message"
-                  className="d-block w-100 border-0 border-bottom mb-4 p-2"
-                  required
-                ></textarea>
+                <div className="mb-4">
+                  <textarea
+                    name="message"
+                    cols="30"
+                    rows="10"
+                    placeholder="Your message"
+                    value={msg}
+                    onChange={handleMsgChange}
+                    aria-label="Enter your message"
+                    className={`d-block w-100 border-0 border-bottom p-2 ${
+                      msgError ? "is-invalid border-danger" : ""
+                    }`}
+                    required
+                  ></textarea>
+                  <p className="invalid-feedback mb-0">{msgError}</p>
+                </div>
                 <Button
                   type="submit"
                   className="submit-btn d-block rounded-0 border-0"
@@ -177,7 +248,7 @@ const ContactWindow = ({
                 </li>
                 <li>
                   <a
-                    href="https://www.linkedin.com/in/aya-saeed261/"
+                    href="https://www.linkedin.com/in/ayamohamedsaeed/"
                     aria-label="LinkedIn account"
                     className="nav-link"
                     target="_blank"

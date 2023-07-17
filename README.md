@@ -1,6 +1,6 @@
 # My Portfolio
 
-original Design [here](https://webflow.com/made-in-webflow/website/Retro-Desktop).
+[Original Design](https://webflow.com/made-in-webflow/website/Retro-Desktop).
 
 ## Built with
 

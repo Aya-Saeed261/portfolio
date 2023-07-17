@@ -61,7 +61,7 @@ const AboutWindow = ({
             onCloseWindow={onCloseWindow}
             onMinimizeWindow={() => onMinimizeWindow("about", true)}
           />
-          <main className="window-main overflowY-scroll  flex-fill bg-white py-3">
+          <main className="window-main overflow-y-auto flex-fill bg-white py-3">
             <Container fluid className="holder">
               <Tabs
                 id="controlled-tab"
@@ -69,7 +69,7 @@ const AboutWindow = ({
                 onSelect={(k) => setKey(k)}
                 className="mb-3 gray-bg"
               >
-                <Tab eventKey="story" title="My story">
+                <Tab eventKey="story" title="About">
                   <Story />
                 </Tab>
                 <Tab eventKey="skills" title="Skills">

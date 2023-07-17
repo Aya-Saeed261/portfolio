@@ -11,6 +11,8 @@ import projects from "../../../../assets/icons/folder-icon.png";
 import project1 from "../../../../assets/projects/project-1.png";
 import project2 from "../../../../assets/projects/project-2.png";
 import project3 from "../../../../assets/projects/project-3.png";
+import project4 from "../../../../assets/projects/project-4.png";
+import project5 from "../../../../assets/projects/project-5.png";
 
 // Imported components
 import WindowHeader from "../windowHeader";
@@ -61,14 +63,53 @@ const ProjectsWindow = ({
             onCloseWindow={onCloseWindow}
             onMinimizeWindow={() => onMinimizeWindow("projects", true)}
           />
-          <main className="window-main overflowY-scroll  flex-fill bg-white pt-4 pb-5">
+          <main className="window-main overflow-y-auto flex-fill bg-white pt-4 pb-5">
             <Container fluid className="pt-3">
-              <Row className="m-0 mb-5 justify-content-center">
+              <Row className="m-0 mb-5 row-gap-5 justify-content-center">
                 <Col
                   className={`${
                     isFullScreen
-                      ? "col-12 col-md-6 col-lg-5 col-xl-4 px-0 px-md-3 mb-5 mb-xl-0"
-                      : "col-12 col-md-8 px-0 mb-5"
+                      ? "col-12 col-md-6 col-lg-5 col-xl-4 px-0 px-md-3"
+                      : "col-12 col-md-8 px-0"
+                  }  `}
+                >
+                  <Project
+                    img={project4}
+                    name="Comfy"
+                    codeLink="https://github.com/Comfy-team/comfy-frontend"
+                    liveLink="https://comfy-frontend.vercel.app"
+                    tags={[
+                      "Ecommerce",
+                      "React",
+                      "Redux",
+                      "Bootstrap",
+                      "React-Bootstrap",
+                      "Node.js",
+                      "Express.js",
+                      "MongoDB",
+                    ]}
+                  />
+                </Col>
+                <Col
+                  className={`${
+                    isFullScreen
+                      ? "col-12 col-md-6 col-lg-5 col-xl-4 px-0 px-md-3"
+                      : "col-12 col-md-8 px-0"
+                  }  `}
+                >
+                  <Project
+                    img={project5}
+                    name="Sudoku for children"
+                    codeLink="https://github.com/Aya-Saeed261/sudoku-for-children"
+                    liveLink="https://aya-saeed261.github.io/sudoku-for-children/index.html"
+                    tags={["Game", "HTML", "CSS", "JavaScript"]}
+                  />
+                </Col>
+                <Col
+                  className={`${
+                    isFullScreen
+                      ? "col-12 col-md-6 col-lg-5 col-xl-4 px-0 px-md-3"
+                      : "col-12 col-md-8 px-0"
                   }  `}
                 >
                   <Project
@@ -76,14 +117,14 @@ const ProjectsWindow = ({
                     name="Ruper store"
                     codeLink="https://github.com/Aya-Saeed261/ruper-store/tree/master"
                     liveLink="https://aya-saeed261.github.io/ruper-store/"
-                    tags={["React", "Bootstrap"]}
+                    tags={["Ecommerce", "React", "Bootstrap"]}
                   />
                 </Col>
                 <Col
                   className={`${
                     isFullScreen
-                      ? "col-12 col-md-6 col-lg-5 col-xl-4 px-0 px-md-3 mb-5 mb-xl-0"
-                      : "col-12 col-md-8 px-0 mb-5"
+                      ? "col-12 col-md-6 col-lg-5 col-xl-4 px-0 px-md-3"
+                      : "col-12 col-md-8 px-0"
                   }  `}
                 >
                   <Project

@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 
-// Imported components
-import Desktop from "./desktop/desktop";
-import Taskbar from "./taskbar/taskbar";
-import Credits from "./credits";
-import LoadingScreen from "./loadingScreen";
+// Components
+import Desktop from "./components/desktop/desktop";
+import Taskbar from "./components/taskbar/taskbar";
+import Credits from "./components/credits";
+import LoadingScreen from "./components/loadingScreen";
 
 const App = () => {
   const [order, setOrder] = useState({ about: 1, projects: 2, contact: 3 });
