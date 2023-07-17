@@ -24,7 +24,7 @@ const Menu = ({ onOpenCredits, onShutDown }) => {
       <Dropdown.Menu className="ps-3 gray-bg rounded-0">
         <Dropdown.Item
           as="a"
-          href="https://drive.google.com/file/d/1SUm90ctkSED8ljU_QZc6ZSzlyyPHzYqP/view?usp=sharing"
+          href="https://drive.google.com/file/d/14bsEC_SbdvRp86nBpxlRxy3x5GI5jgvE/view?usp=sharing"
           target="_blank"
           rel="noreferrer"
         >
