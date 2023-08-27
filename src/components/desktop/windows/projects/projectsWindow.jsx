@@ -13,6 +13,7 @@ import project2 from "../../../../assets/projects/project-2.png";
 import project3 from "../../../../assets/projects/project-3.png";
 import project4 from "../../../../assets/projects/project-4.png";
 import project5 from "../../../../assets/projects/project-5.png";
+import project6 from "../../../../assets/projects/project-6.png";
 
 // Imported components
 import WindowHeader from "../windowHeader";
@@ -103,6 +104,21 @@ const ProjectsWindow = ({
                     codeLink="https://github.com/Aya-Saeed261/sudoku-for-children"
                     liveLink="https://aya-saeed261.github.io/sudoku-for-children/index.html"
                     tags={["Game", "HTML", "CSS", "JavaScript"]}
+                  />
+                </Col>
+                <Col
+                  className={`${
+                    isFullScreen
+                      ? "col-12 col-md-6 col-lg-5 col-xl-4 px-0 px-md-3"
+                      : "col-12 col-md-8 px-0"
+                  }  `}
+                >
+                  <Project
+                    img={project6}
+                    name="Global landing page"
+                    codeLink="https://github.com/Aya-Saeed261/global-inc/tree/master"
+                    liveLink="https://aya-saeed261.github.io/global-inc/"
+                    tags={["React", "Bootstrap","HTML", "CSS", "JavaScript"]}
                   />
                 </Col>
                 <Col
