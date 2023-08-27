@@ -9,7 +9,11 @@ const Project = ({ img, name, codeLink, liveLink, tags }) => {
   return (
     <div className="project-holder shadow h-100">
       <div className="image-holder position-relative mb-3">
-        <img src={img} alt="Project" className="img-fluid h-100 w-100 object-fit-cover" />
+        <img
+          src={img}
+          alt="Project"
+          className="img-fluid h-100 w-100 object-fit-cover"
+        />
         <div className="links-holder position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center gap-4">
           <Button
             aria-label="View live site"
@@ -38,6 +42,8 @@ const Project = ({ img, name, codeLink, liveLink, tags }) => {
           <a
             href={liveLink}
             className="name-link text-decoration-none"
+            target="_blank"
+            rel="noreferrer"
           >
             {name}
           </a>
