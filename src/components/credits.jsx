@@ -50,7 +50,7 @@ const Credits = ({ show, onClose }) => {
               Streamline
             </a>
           </p>
-          <p className="mb-0">
+          <p>
             <a
               href="https://codepen.io/zerospree/pen/Vwvqbw"
               className="text-decoration-none"
@@ -61,6 +61,7 @@ const Credits = ({ show, onClose }) => {
             </a>{" "}
             by Codrin Pavel
           </p>
+          <p className="mb-0">Developed with love by me &hearts;</p>
         </div>
       </Modal.Body>
     </Modal>
