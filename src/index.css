@@ -693,6 +693,10 @@ body,
   border-radius: 0;
   padding: 0.5rem;
 }
+
+.credits-modal a {
+color: var(--contact-btn);
+}
 /* End credits modal */
 
 /* Start pixel heart */
