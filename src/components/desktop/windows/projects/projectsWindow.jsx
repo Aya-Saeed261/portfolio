@@ -80,6 +80,7 @@ const ProjectsWindow = ({
                     codeLink="https://github.com/Comfy-team/comfy-frontend"
                     liveLink="https://comfy-frontend.vercel.app"
                     tags={[
+                      "ITI Graduation Project",
                       "Ecommerce",
                       "React",
                       "Redux",
@@ -99,11 +100,11 @@ const ProjectsWindow = ({
                   }  `}
                 >
                   <Project
-                    img={project5}
-                    name="Sudoku for children"
-                    codeLink="https://github.com/Aya-Saeed261/sudoku-for-children"
-                    liveLink="https://aya-saeed261.github.io/sudoku-for-children/index.html"
-                    tags={["Game", "HTML", "CSS", "JavaScript"]}
+                    img={project6}
+                    name="Global landing page"
+                    codeLink="https://github.com/Aya-Saeed261/global-inc/tree/master"
+                    liveLink="https://aya-saeed261.github.io/global-inc/"
+                    tags={["React", "Bootstrap","HTML", "CSS", "JavaScript"]}
                   />
                 </Col>
                 <Col
@@ -114,11 +115,11 @@ const ProjectsWindow = ({
                   }  `}
                 >
                   <Project
-                    img={project6}
-                    name="Global landing page"
-                    codeLink="https://github.com/Aya-Saeed261/global-inc/tree/master"
-                    liveLink="https://aya-saeed261.github.io/global-inc/"
-                    tags={["React", "Bootstrap","HTML", "CSS", "JavaScript"]}
+                    img={project5}
+                    name="Sudoku for children"
+                    codeLink="https://github.com/Aya-Saeed261/sudoku-for-children"
+                    liveLink="https://aya-saeed261.github.io/sudoku-for-children/index.html"
+                    tags={["Game", "HTML", "CSS", "JavaScript"]}
                   />
                 </Col>
                 <Col
