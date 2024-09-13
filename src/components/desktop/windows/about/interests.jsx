@@ -29,8 +29,7 @@ const Interests = () => {
           painting can say exactly what you're thinking and express the feelings
           you can't put into words. I find peace in looking at beautiul
           paintings and get excited every time I find a breathtaking painting
-          that I haven't seen before. One of my goals is to go to an art gallery
-          one day.
+          that I haven't seen before.
         </p>
       </li>
       <li className="mb-4 pb-4 position-relative">

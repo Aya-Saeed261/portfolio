@@ -22,7 +22,7 @@ const AboutWindow = ({
   onMinimizeWindow,
   isMinimized,
 }) => {
-  const [key, setKey] = useState("story");
+  const [key, setKey] = useState("skills");
   const [isFullScreen, setIsFullScreen] = useState(false);
   const nodeRef = useRef(null);
 
@@ -69,9 +69,9 @@ const AboutWindow = ({
                 onSelect={(k) => setKey(k)}
                 className="mb-3 gray-bg"
               >
-                <Tab eventKey="story" title="About">
+                {/* <Tab eventKey="story" title="About">
                   <Story />
-                </Tab>
+                </Tab> */}
                 <Tab eventKey="skills" title="Skills">
                   <Skills />
                 </Tab>
