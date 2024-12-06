@@ -37,12 +37,12 @@ const Skills = () => {
       <li className="position-relative overflow-hidden">
         <img src={redux} alt="Redux logo" className="img-fluid" />
       </li>
-      <li className="position-relative overflow-hidden">
+      {/* <li className="position-relative overflow-hidden">
         <img src={nodejs} alt="NodeJS logo" className="img-fluid" />
       </li>
       <li className="position-relative overflow-hidden">
         <img src={mongodb} alt="MongoDB logo" className="img-fluid" />
-      </li>
+      </li> */}
     </ul>
   );
 };
