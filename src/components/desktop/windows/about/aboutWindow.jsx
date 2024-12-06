@@ -22,7 +22,7 @@ const AboutWindow = ({
   onMinimizeWindow,
   isMinimized,
 }) => {
-  const [key, setKey] = useState("skills");
+  const [key, setKey] = useState("story");
   const [isFullScreen, setIsFullScreen] = useState(false);
   const nodeRef = useRef(null);
 
