@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.426477ce.css",
-    "main.js": "/portfolio/static/js/main.efa8606b.js",
+    "main.js": "/portfolio/static/js/main.2dc10bde.js",
     "static/media/painting-gif.gif": "/portfolio/static/media/painting-gif.b9a52b777fea750fc02c.gif",
     "static/media/project-4.png": "/portfolio/static/media/project-4.c3f21df3e461b508336c.png",
     "static/media/project-5.png": "/portfolio/static/media/project-5.28055988468b5e098eec.png",
@@ -10,12 +10,12 @@
     "static/media/project-1.png": "/portfolio/static/media/project-1.f50b48b07c3b22272085.png",
     "static/media/project-3.png": "/portfolio/static/media/project-3.a54160dac9160102a4bd.png",
     "static/media/project-2.png": "/portfolio/static/media/project-2.057ec3760dbe113f6359.png",
-    "static/media/mongodb.png": "/portfolio/static/media/mongodb.ece61a5e4d67f525d140.png",
-    "static/media/nodejs.png": "/portfolio/static/media/nodejs.1ba94b32dec88c028c42.png",
-    "static/media/reactjs.png": "/portfolio/static/media/reactjs.ed45923ade03697c994a.png",
+    "static/media/sass.svg": "/portfolio/static/media/sass.c2bcf68725b3a96317df66671732eb13.svg",
     "static/media/bootstrap.svg": "/portfolio/static/media/bootstrap.88d777cba9db1628fbcc4319e380caa5.svg",
     "static/media/github.svg": "/portfolio/static/media/github.0046aca0d3ace6f5c7e059797925848a.svg",
+    "static/media/ant-design.svg": "/portfolio/static/media/ant-design.74f49b818e37a0099438b87e085db1b6.svg",
     "static/media/code-icon.svg": "/portfolio/static/media/code-icon.9b12dfe7e51d0e5aa4abd71231a348d8.svg",
+    "static/media/react.svg": "/portfolio/static/media/react.4e0c97009b885bfa75c5412262a46f5f.svg",
     "static/media/git.svg": "/portfolio/static/media/git.3ac9a6169cd58c66df206f965721cfb3.svg",
     "static/media/linkedin.svg": "/portfolio/static/media/linkedin.c304a4148cde039a54532585f4d47b48.svg",
     "static/media/javascript.svg": "/portfolio/static/media/javascript.88f2cfeb7b596582cdfd50063b108439.svg",
@@ -24,13 +24,14 @@
     "static/media/css3.svg": "/portfolio/static/media/css3.7b05526845d7a6672ee3f536a71c20f8.svg",
     "static/media/restore-down-icon.svg": "/portfolio/static/media/restore-down-icon.5d1c3b98b2c06500da1da2fb8160e4dd.svg",
     "static/media/maximize-icon.svg": "/portfolio/static/media/maximize-icon.231d77f38a7d837bfde499b07196e105.svg",
+    "static/media/firebase.svg": "/portfolio/static/media/firebase.0d5ec3e60614ea8e4d7abbf0729e969b.svg",
     "static/media/close-icon.svg": "/portfolio/static/media/close-icon.64f09d760e8936f5907a62abff40b422.svg",
     "static/media/minimize-icon.svg": "/portfolio/static/media/minimize-icon.b72eb12a233a292f6426b61e9b25af20.svg",
     "main.426477ce.css.map": "/portfolio/static/css/main.426477ce.css.map",
-    "main.efa8606b.js.map": "/portfolio/static/js/main.efa8606b.js.map"
+    "main.2dc10bde.js.map": "/portfolio/static/js/main.2dc10bde.js.map"
   },
   "entrypoints": [
     "static/css/main.426477ce.css",
-    "static/js/main.efa8606b.js"
+    "static/js/main.2dc10bde.js"
   ]
 }
