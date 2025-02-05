@@ -2,13 +2,14 @@
 import html from "../../../../assets/skills/html5.svg";
 import css from "../../../../assets/skills/css3.svg";
 import js from "../../../../assets/skills/javascript.svg";
-import react from "../../../../assets/skills/reactjs.png";
+import react from "../../../../assets/skills/react.svg";
 import git from "../../../../assets/skills/git.svg";
 import github from "../../../../assets/skills/github.svg";
 import bootstrap from "../../../../assets/skills/bootstrap.svg";
 import redux from "../../../../assets/skills/redux.png";
-import nodejs from "../../../../assets/skills/nodejs.png";
-import mongodb from "../../../../assets/skills/mongodb.png";
+import sass from "../../../../assets/skills/sass.svg";
+import antd from "../../../../assets/skills/ant-design.svg";
+import firebase from "../../../../assets/skills/firebase.svg";
 
 const Skills = () => {
   return (
@@ -26,16 +27,25 @@ const Skills = () => {
         <img src={bootstrap} alt="Bootstrap logo" className="img-fluid" />
       </li>
       <li className="position-relative overflow-hidden">
-        <img src={git} alt="Git logo" className="img-fluid" />
+        <img src={antd} alt="Ant Design logo" className="img-fluid" />
       </li>
       <li className="position-relative overflow-hidden">
-        <img src={github} alt="Github logo" className="img-fluid" />
+        <img src={sass} alt="SASS logo" className="img-fluid" />
       </li>
       <li className="position-relative overflow-hidden">
         <img src={react} alt="React logo" className="img-fluid" />
       </li>
       <li className="position-relative overflow-hidden">
         <img src={redux} alt="Redux logo" className="img-fluid" />
+      </li>
+      <li className="position-relative overflow-hidden">
+        <img src={git} alt="Git logo" className="img-fluid" />
+      </li>
+      <li className="position-relative overflow-hidden">
+        <img src={github} alt="Github logo" className="img-fluid" />
+      </li>
+      <li className="position-relative overflow-hidden">
+        <img src={firebase} alt="Firebase logo" className="img-fluid" />
       </li>
       {/* <li className="position-relative overflow-hidden">
         <img src={nodejs} alt="NodeJS logo" className="img-fluid" />
